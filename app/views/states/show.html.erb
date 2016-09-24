@@ -5,5 +5,8 @@
   <%= @state.name %>
 </p>
 
+<div>
+  <%= link_to 'Cities', state_cities_path(@state) %>
+</div>
 <%= link_to 'Edit', edit_state_path(@state) %> |
 <%= link_to 'Back', country_states_path(@state.country_name) %>
