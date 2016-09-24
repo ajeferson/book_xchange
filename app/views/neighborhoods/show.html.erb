@@ -5,5 +5,9 @@
   <%= @neighborhood.name %>
 </p>
 
+
+<div>
+  <%= link_to 'Streets', neighborhood_streets_path(@neighborhood) %>
+</div>
 <%= link_to 'Edit', edit_neighborhood_path(@neighborhood) %> |
 <%= link_to 'Back', city_neighborhoods_path(@neighborhood.city) %>
