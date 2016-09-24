@@ -47,3 +47,4 @@ end
 
 gem 'figaro', '1.1.1'
 gem 'pg', '0.18.4'
+gem 'mysql'
