@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pages: 1
+  isbn: MyString
+  name: MyString
+  publish_date: 2016-09-24
+  edition: 1
+  publisher_cnpj: MyString
+  genre_id: 
+  author_cpf: MyString
+
+two:
+  pages: 1
+  isbn: MyString
+  name: MyString
+  publish_date: 2016-09-24
+  edition: 1
+  publisher_cnpj: MyString
+  genre_id: 
+  author_cpf: MyString

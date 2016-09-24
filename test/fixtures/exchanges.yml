@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-09-24
+  user_a_username: MyString
+  user_b_username: MyString
+  book_a_isbn: MyString
+  book_b_isbn: MyString
+
+two:
+  date: 2016-09-24
+  user_a_username: MyString
+  user_b_username: MyString
+  book_a_isbn: MyString
+  book_b_isbn: MyString

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  date: 2016-09-24 18:37:11
+  addressee_username: MyString
+  sender_username: MyString
+
+two:
+  body: MyString
+  date: 2016-09-24 18:37:11
+  addressee_username: MyString
+  sender_username: MyString

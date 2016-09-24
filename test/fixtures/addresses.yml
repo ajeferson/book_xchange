@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  complement: MyString
+  cep: MyString
+  street_id: 
+
+two:
+  number: MyString
+  complement: MyString
+  cep: MyString
+  street_id: 
