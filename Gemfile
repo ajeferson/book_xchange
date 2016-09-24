@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+gem 'figaro', '1.1.1'
+gem 'pg', '0.18.4'
