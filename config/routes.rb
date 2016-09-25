@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources :states, shallow: true do
       resources :cities, shallow: true do
         resources :neighborhoods, shallow: true do
-          resources :streets, shallow: true
+          resources :streets, shallow: true do
+            resources :addresses, shallow: true
+          end
         end
       end
     end
