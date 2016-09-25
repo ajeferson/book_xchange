@@ -1,0 +1,37 @@
+<%= form_for(@evaluation, url: @evaluation.persisted? ? evaluation_path(@evaluation.cool_id) : evaluations_path, method: @evaluation.persisted? ? :patch : :post) do |f| %>
+    <% if @evaluation.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+          <ul>
+            <% @evaluation.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :points %><br>
+      <%= f.number_field :points %>
+    </div>
+    <div class="field">
+      <%= f.label :comment %><br>
+      <%= f.text_field :comment %>
+    </div>
+    <div class="field">
+      <%= f.label :user %>
+      <%= f.select :user_username,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select users_options_for_select, selected: @evaluation.user_username %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :book %>
+      <%= f.select :book_isbn,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select books_options_for_select, selected: @evaluation.book_isbn %>
+      <% end %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

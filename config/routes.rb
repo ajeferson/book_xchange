@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   resources :books
   resources :users
   resources :exchanges
+  resources :evaluations
 
 end

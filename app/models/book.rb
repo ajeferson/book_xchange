@@ -3,6 +3,7 @@ class Book < ActiveRecord::Base
   belongs_to :genre
   belongs_to :publisher, foreign_key: 'publisher_cnpj'
   belongs_to :author, foreign_key: 'author_cpf'
+  has_many :evaluations
 
   self.primary_key = 'isbn'
 
