@@ -1,0 +1,45 @@
+<%= form_for(@exchange) do |f| %>
+    <% if @exchange.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@exchange.errors.count, "error") %> prohibited this exchange from being saved:</h2>
+
+          <ul>
+            <% @exchange.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :date %><br>
+      <%= f.date_field :date %>
+    </div>
+    <div class="field">
+      <%= f.label :user_a %>
+      <%= f.select :user_a_username,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select users_options_for_select, selected: @exchange.user_a_username %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :user_b %>
+      <%= f.select :user_b_username,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select users_options_for_select, selected: @exchange.user_b_username %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :book_a %>
+      <%= f.select :book_a_isbn,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select books_options_for_select, selected: @exchange.book_a_isbn %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :book_b %>
+      <%= f.select :book_b_isbn,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select books_options_for_select, selected: @exchange.book_b_isbn %>
+      <% end %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
