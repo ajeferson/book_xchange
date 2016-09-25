@@ -1,0 +1,55 @@
+<%= form_for(@book) do |f| %>
+    <% if @book.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+          <ul>
+            <% @book.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :pages %><br>
+      <%= f.number_field :pages %>
+    </div>
+    <div class="field">
+      <%= f.label :isbn %><br>
+      <%= f.text_field :isbn %>
+    </div>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :publish_date %><br>
+      <%= f.date_select :publish_date %>
+    </div>
+    <div class="field">
+      <%= f.label :edition %><br>
+      <%= f.number_field :edition %>
+    </div>
+    <div class="field">
+      <%= f.label :publisher %>
+      <%= f.select :publisher_cnpj,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select publishers_options_for_select, selected: @book.publisher_cnpj %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :genre %>
+      <%= f.select :genre_id,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select genres_options_for_select, selected: @book.genre_id %>
+      <% end %>
+    </div>
+    <div class="field">
+      <%= f.label :author %>
+      <%= f.select :author_cpf,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select authors_options_for_select, selected: @book.author_cpf %>
+      <% end %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
