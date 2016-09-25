@@ -9,4 +9,8 @@ class Evaluation < ActiveRecord::Base
     "#{book_isbn}-#{user_username}"
   end
 
+  def self.find(id)
+    puts 'Valhalla'
+  end
+
 end
