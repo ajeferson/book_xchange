@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :messages
+  root 'application#home'
+
   resources :countries, param: :name, shallow: true do
     resources :states, shallow: true do
       resources :cities, shallow: true do
@@ -20,5 +21,6 @@ Rails.application.routes.draw do
   resources :users
   resources :exchanges
   resources :evaluations
+  resources :messages
 
 end
