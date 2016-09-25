@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :authors
   resources :countries, param: :name, shallow: true do
     resources :states, shallow: true do
       resources :cities, shallow: true do
