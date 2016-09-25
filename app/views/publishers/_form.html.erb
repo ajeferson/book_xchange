@@ -1,0 +1,31 @@
+<%= form_for(@publisher) do |f| %>
+    <% if @publisher.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@publisher.errors.count, "error") %> prohibited this publisher from being saved:</h2>
+
+          <ul>
+            <% @publisher.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :cnpj %><br>
+      <%= f.text_field :cnpj %>
+    </div>
+    <div class="field">
+      <%= f.label :address %>
+      <%= f.select :address_id,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
+          <%= options_for_select addresses_options_for_select, selected: @publisher.address_id %>
+      <% end %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
