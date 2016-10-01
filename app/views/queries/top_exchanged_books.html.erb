@@ -1,0 +1,17 @@
+<h1>Top 3 livros trocados</h1>
+
+<table>
+
+  <tr>
+    <th>Nome</th>
+    <th>Trocas</th>
+  </tr>
+
+  <% @books.each do |book| %>
+      <tr>
+        <td><%= book.name %></td>
+        <td><%= book.exchanges %></td>
+      </tr>
+  <% end %>
+
+</table>

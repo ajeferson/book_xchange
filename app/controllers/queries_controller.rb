@@ -10,4 +10,8 @@ class QueriesController < ApplicationController
     @users = User.top_contributors
   end
 
+  def top_exchanged_books
+    @books = Book.top_exchanged_books
+  end
+
 end

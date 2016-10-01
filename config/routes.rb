@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   resources :queries, only: [:index] do
     get 'top_titles', on: :collection
     get 'top_contributors', on: :collection
+    get 'top_exchanged_books', on: :collection
   end
 
 end
