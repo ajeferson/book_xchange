@@ -10,8 +10,14 @@ class QueriesController < ApplicationController
     @users = User.top_contributors
   end
 
+  # GET /queries/top_exchanged_books
   def top_exchanged_books
     @books = Book.top_exchanged_books
+  end
+
+  # GET /queries/top_authors
+  def top_authors
+    @authors = Author.top_authors
   end
 
 end

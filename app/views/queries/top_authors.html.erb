@@ -1,0 +1,17 @@
+<h1>Top 3 authores mais trocados</h1>
+
+<table>
+
+  <tr>
+    <th>Nome</th>
+    <th>Trocas</th>
+  </tr>
+
+  <% @authors.each do |author| %>
+      <tr>
+        <td><%= author.name %></td>
+        <td><%= author.ex %></td>
+      </tr>
+  <% end %>
+
+</table>

@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     get 'top_titles', on: :collection
     get 'top_contributors', on: :collection
     get 'top_exchanged_books', on: :collection
+    get 'top_authors', on: :collection
   end
 
 end
