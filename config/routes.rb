@@ -22,12 +22,17 @@ Rails.application.routes.draw do
   resources :exchanges
   resources :evaluations
   resources :messages
+
   resources :queries, only: [:index] do
     get 'top_titles', on: :collection
     get 'top_contributors', on: :collection
     get 'top_exchanged_books', on: :collection
     get 'top_authors', on: :collection
     get 'pagenometer', on: :collection
+  end
+
+  resources :views, only: [:index] do
+    get 'books_info', on: :collection
   end
 
 end

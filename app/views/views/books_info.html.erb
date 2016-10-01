@@ -1,0 +1,25 @@
+<h1>Informações sobre livros</h1>
+
+<table>
+
+  <tr>
+    <th>Nome</th>
+    <th>Páginas</th>
+    <th>ISBN</th>
+    <th>Editora</th>
+    <th>Autor</th>
+    <th>Data de publicação</th>
+  </tr>
+
+  <% @books.each do |book| %>
+      <tr>
+        <td><%= book.titulo %></td>
+        <td><%= book.pages %></td>
+        <td><%= book.isbn %></td>
+        <td><%= book.editora %></td>
+        <td><%= book.autor %></td>
+        <td><%= l(book.publicacao, format: :long) %></td>
+      </tr>
+  <% end %>
+
+</table>

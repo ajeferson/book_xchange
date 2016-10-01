@@ -46,6 +46,15 @@ class_methods do
     )
   end
 
+  def books_info
+    Book.find_by_sql(
+        'SELECT
+          *
+        FROM
+          books_info'
+    )
+  end
+
 end
 
 
