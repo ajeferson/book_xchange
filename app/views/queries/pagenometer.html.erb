@@ -1,0 +1,17 @@
+<h1>Paginômetro</h1>
+
+<table>
+
+  <tr>
+    <th>Nome</th>
+    <th>Páginas</th>
+  </tr>
+
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.pages.to_i %></td>
+      </tr>
+  <% end %>
+
+</table>

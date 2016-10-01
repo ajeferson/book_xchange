@@ -20,4 +20,8 @@ class QueriesController < ApplicationController
     @authors = Author.top_authors
   end
 
+  def pagenometer
+    @users = User.pagenometer
+  end
+
 end
