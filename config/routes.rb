@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   end
 
   resources :views, only: [:index] do
-    get 'books_info', on: :collection
+    get 'books_info', 'book_owners', on: :collection
   end
 
 end

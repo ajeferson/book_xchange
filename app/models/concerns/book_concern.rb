@@ -55,6 +55,15 @@ class_methods do
     )
   end
 
+  def book_owners
+    Book.find_by_sql(
+        'SELECT
+          *
+        FROM
+          book_owners'
+    )
+  end
+
 end
 
 
