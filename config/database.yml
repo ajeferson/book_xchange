@@ -5,10 +5,11 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql
+  adapter: postgresql
   pool: 25
   timeout: 5000
-  database: <%= ENV['DATABASE_NAME'] %>
+  encoding: unicode
+  database: book_xchange
 
 development:
   <<: *default
