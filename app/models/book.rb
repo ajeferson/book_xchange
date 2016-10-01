@@ -1,5 +1,7 @@
 class Book < ActiveRecord::Base
 
+  include BookConcern
+
   belongs_to :genre
   belongs_to :publisher, foreign_key: 'publisher_cnpj'
   belongs_to :author, foreign_key: 'author_cpf'
