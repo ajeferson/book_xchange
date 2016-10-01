@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :messages
   resources :queries, only: [:index] do
     get 'top_titles', on: :collection
+    get 'top_contributors', on: :collection
   end
 
 end
