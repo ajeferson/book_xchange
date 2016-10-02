@@ -11,30 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924213711) do
+ActiveRecord::Schema.define(version: 20161002020644) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
-    t.string  "number",     limit: 255, null: false
-    t.string  "complement", limit: 255
-    t.string  "cep",        limit: 255, null: false
-    t.integer "street_id",  limit: 4
+    t.string  "number",     null: false
+    t.string  "complement"
+    t.string  "cep",        null: false
+    t.integer "street_id"
   end
 
   add_index "addresses", ["street_id"], name: "index_addresses_on_street_id", using: :btree
 
   create_table "authors", primary_key: "cpf", force: :cascade do |t|
-    t.string "name",       limit: 255, null: false
+    t.string "name",       null: false
     t.date   "birth_date"
   end
 
   create_table "books", primary_key: "isbn", force: :cascade do |t|
-    t.integer "pages",          limit: 4,   null: false
-    t.string  "name",           limit: 255, null: false
-    t.date    "publish_date",               null: false
-    t.integer "edition",        limit: 4,   null: false
-    t.string  "publisher_cnpj", limit: 255, null: false
-    t.integer "genre_id",       limit: 4,   null: false
-    t.string  "author_cpf",     limit: 255, null: false
+    t.integer "pages",          null: false
+    t.string  "name",           null: false
+    t.date    "publish_date",   null: false
+    t.integer "edition",        null: false
+    t.string  "publisher_cnpj"
+    t.integer "genre_id"
+    t.string  "author_cpf",     null: false
   end
 
   add_index "books", ["author_cpf"], name: "index_books_on_author_cpf", using: :btree
@@ -42,8 +45,8 @@ ActiveRecord::Schema.define(version: 20160924213711) do
   add_index "books", ["publisher_cnpj"], name: "index_books_on_publisher_cnpj", using: :btree
 
   create_table "cities", force: :cascade do |t|
-    t.string  "name",     limit: 255, null: false
-    t.integer "state_id", limit: 4
+    t.string  "name",     null: false
+    t.integer "state_id"
   end
 
   add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
@@ -52,20 +55,18 @@ ActiveRecord::Schema.define(version: 20160924213711) do
   end
 
   create_table "evaluations", id: false, force: :cascade do |t|
-    t.integer "points",        limit: 4,   null: false
-    t.string  "comment",       limit: 255
-    t.string  "user_username", limit: 255, null: false
-    t.string  "book_isbn",     limit: 255, null: false
+    t.integer "points",        null: false
+    t.string  "comment"
+    t.string  "user_username", null: false
+    t.string  "book_isbn",     null: false
   end
 
-  add_index "evaluations", ["book_isbn"], name: "fk_rails_1b8a1f0fee", using: :btree
-
   create_table "exchanges", force: :cascade do |t|
-    t.date   "date",                        null: false
-    t.string "user_a_username", limit: 255, null: false
-    t.string "user_b_username", limit: 255, null: false
-    t.string "book_a_isbn",     limit: 255, null: false
-    t.string "book_b_isbn",     limit: 255, null: false
+    t.date   "date",            null: false
+    t.string "user_a_username", null: false
+    t.string "user_b_username", null: false
+    t.string "book_a_isbn",     null: false
+    t.string "book_b_isbn",     null: false
   end
 
   add_index "exchanges", ["book_a_isbn"], name: "index_exchanges_on_book_a_isbn", using: :btree
@@ -74,58 +75,58 @@ ActiveRecord::Schema.define(version: 20160924213711) do
   add_index "exchanges", ["user_b_username"], name: "index_exchanges_on_user_b_username", using: :btree
 
   create_table "genres", force: :cascade do |t|
-    t.string "name", limit: 255
+    t.string "name"
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string   "body",               limit: 255, null: false
-    t.datetime "date",                           null: false
-    t.string   "addressee_username", limit: 255, null: false
-    t.string   "sender_username",    limit: 255, null: false
+    t.string   "body",               null: false
+    t.datetime "date",               null: false
+    t.string   "addressee_username", null: false
+    t.string   "sender_username",    null: false
   end
 
   add_index "messages", ["addressee_username"], name: "index_messages_on_addressee_username", using: :btree
   add_index "messages", ["sender_username"], name: "index_messages_on_sender_username", using: :btree
 
   create_table "neighborhoods", force: :cascade do |t|
-    t.string  "name",    limit: 255, null: false
-    t.integer "city_id", limit: 4
+    t.string  "name",    null: false
+    t.integer "city_id"
   end
 
   add_index "neighborhoods", ["city_id"], name: "index_neighborhoods_on_city_id", using: :btree
 
   create_table "publishers", primary_key: "cnpj", force: :cascade do |t|
-    t.string  "name",       limit: 255, null: false
-    t.integer "address_id", limit: 4,   null: false
+    t.string  "name",       null: false
+    t.integer "address_id", null: false
   end
 
   add_index "publishers", ["address_id"], name: "index_publishers_on_address_id", using: :btree
 
   create_table "states", force: :cascade do |t|
-    t.string "name",         limit: 255, null: false
-    t.string "country_name", limit: 255, null: false
+    t.string "name",         null: false
+    t.string "country_name", null: false
   end
 
   add_index "states", ["country_name"], name: "index_states_on_country_name", using: :btree
 
   create_table "streets", force: :cascade do |t|
-    t.string  "name",            limit: 255, null: false
-    t.string  "kind",            limit: 255, null: false
-    t.integer "neighborhood_id", limit: 4
+    t.string  "name",            null: false
+    t.string  "kind",            null: false
+    t.integer "neighborhood_id"
   end
 
   add_index "streets", ["neighborhood_id"], name: "index_streets_on_neighborhood_id", using: :btree
 
   create_table "telephones", primary_key: "number", force: :cascade do |t|
-    t.string "publisher_cnpj", limit: 255, null: false
+    t.string "publisher_cnpj", null: false
   end
 
   add_index "telephones", ["publisher_cnpj"], name: "index_telephones_on_publisher_cnpj", using: :btree
 
   create_table "users", primary_key: "username", force: :cascade do |t|
-    t.string "name",       limit: 255, null: false
-    t.string "email",      limit: 255, null: false
-    t.string "password",   limit: 255, null: false
+    t.string "name",       null: false
+    t.string "email",      null: false
+    t.string "password",   null: false
     t.date   "birth_date"
   end
 

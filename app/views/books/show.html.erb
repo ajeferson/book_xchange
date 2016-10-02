@@ -27,7 +27,11 @@
 
 <p>
   <strong>Genre:</strong>
-  <%= @book.genre.name %>
+  <% if @book.genre.present? %>
+      <%= @book.genre.name %>
+  <% else %>
+      -
+  <% end %>
 </p>
 
 <p>
@@ -37,7 +41,11 @@
 
 <p>
   <strong>Publisher:</strong>
-  <%= @book.publisher.name %>
+  <% if @book.publisher_cnpj.present? %>
+      <%= @book.publisher.name %>
+  <% else %>
+      -
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
