@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="page-header">
-      <h2>Listing <%= params[:controller].humanize %> <%= link_to 'New Author', url_for(controller: params[:controller], action: :new), class: 'btn btn-primary btn-xs' %></h2>
+      <h2>Listing <%= params[:controller].humanize %> <%= link_to "New #{params[:controller].singularize.humanize}", url_for(controller: params[:controller], action: :new), class: 'btn btn-primary btn-xs' %></h2>
     </div>
   </div>
 </div>
