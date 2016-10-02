@@ -1,10 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @country.name %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<%= link_to 'States', country_states_path(@country) %>
-<%= link_to 'Edit', edit_country_path(@country) %> |
-<%= link_to 'Back', countries_path %>
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <div class="well">
+
+      <div>
+        <strong>Name:</strong>
+        <%= @country.name %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'States', country_states_path(@country), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Edit', edit_country_path(@country), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', countries_path, class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>

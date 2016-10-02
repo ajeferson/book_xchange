@@ -1,12 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @city.name %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<div>
-  <%= link_to 'Neighborhoods', city_neighborhoods_path(@city) %>
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <div class="well">
+
+      <div>
+        <strong>Name:</strong>
+        <%= @city.name %>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', state_cities_path(@city.state) %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Neighborhoods', city_neighborhoods_path(@city), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Edit', edit_city_path(@city), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', state_cities_path(@city.state), class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>

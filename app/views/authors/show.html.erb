@@ -1,19 +1,37 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @author.name %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<p>
-  <strong>Cpf:</strong>
-  <%= @author.cpf %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Date:</strong>
-  <%= l(@author.birth_date, format: :long) %>
-</p>
+  <div class="col-sm-12">
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+    <div class="well">
+
+      <div>
+        <strong>Name:</strong>
+        <%= @author.name %>
+      </div>
+
+      <div>
+        <strong>Cpf:</strong>
+        <%= @author.cpf %>
+      </div>
+
+      <div>
+        <strong>Date:</strong>
+        <%= l(@author.birth_date, format: :long) %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Edit', edit_author_path(@author), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', authors_path, class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>

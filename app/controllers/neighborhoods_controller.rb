@@ -31,7 +31,7 @@ class NeighborhoodsController < ApplicationController
 
     respond_to do |format|
       if @neighborhood.save
-        format.html { redirect_to city_neighborhoods_path(@city), notice: 'Neighborhood was successfully created.' }
+        format.html { redirect_to neighborhood_path(@neighborhood), notice: 'Neighborhood was successfully created.' }
         format.json { render :show, status: :created, location: @neighborhood }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class NeighborhoodsController < ApplicationController
   def update
     respond_to do |format|
       if @neighborhood.update(neighborhood_params)
-        format.html { redirect_to city_neighborhoods_path(@neighborhood.city), notice: 'Neighborhood was successfully updated.' }
+        format.html { redirect_to neighborhood_path(@neighborhood), notice: 'Neighborhood was successfully updated.' }
         format.json { render :show, status: :ok, location: @neighborhood }
       else
         format.html { render :edit }

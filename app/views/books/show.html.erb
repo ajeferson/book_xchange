@@ -1,56 +1,74 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Pages:</strong>
-  <%= @book.pages %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<p>
-  <strong>Isbn:</strong>
-  <%= @book.isbn %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @book.name %>
-</p>
+  <div class="col-sm-12">
 
-<p>
-  <strong>Publish date:</strong>
-  <%= @book.publish_date %>
-</p>
+    <div class="well">
 
-<p>
-  <strong>Edition:</strong>
-  <%= @book.edition %>
-</p>
+      <div>
+        <strong>Name:</strong>
+        <%= @book.name %>
+      </div>
 
-<p>
-  <strong>Genre:</strong>
-  <% if @book.genre.present? %>
-      <%= @book.genre.name %>
-  <% else %>
-      -
-  <% end %>
-</p>
+      <div>
+        <strong>Pages:</strong>
+        <%= @book.pages %>
+      </div>
 
-<p>
-  <strong>Author:</strong>
-  <% if @book.author_cpf.present? %>
-      <%= @book.author.name %>
-  <% else %>
-      -
-  <% end %>
-</p>
+      <div>
+        <strong>Isbn:</strong>
+        <%= @book.isbn %>
+      </div>
 
-<p>
-  <strong>Publisher:</strong>
-  <% if @book.publisher_cnpj.present? %>
-      <%= @book.publisher.name %>
-  <% else %>
-      -
-  <% end %>
-</p>
+      <div>
+        <strong>Publish date:</strong>
+        <%= @book.publish_date %>
+      </div>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+      <div>
+        <strong>Edition:</strong>
+        <%= @book.edition %>
+      </div>
+
+      <div>
+        <strong>Genre:</strong>
+        <% if @book.genre.present? %>
+            <%= @book.genre.name %>
+        <% else %>
+            -
+        <% end %>
+      </div>
+
+      <div>
+        <strong>Author:</strong>
+        <% if @book.author_cpf.present? %>
+            <%= @book.author.name %>
+        <% else %>
+            -
+        <% end %>
+      </div>
+
+      <div>
+        <strong>Publisher:</strong>
+        <% if @book.publisher_cnpj.present? %>
+            <%= @book.publisher.name %>
+        <% else %>
+            -
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', books_path, class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>

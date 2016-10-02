@@ -1,19 +1,37 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Number:</strong>
-  <%= @address.number %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<p>
-  <strong>Complement:</strong>
-  <%= @address.complement %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Cep:</strong>
-  <%= @address.cep %>
-</p>
+  <div class="col-sm-12">
 
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', street_addresses_path(@address.street) %>
+    <div class="well">
+
+      <div>
+        <strong>Number:</strong>
+        <%= @address.number %>
+      </div>
+
+      <div>
+        <strong>Complement:</strong>
+        <%= @address.complement %>
+      </div>
+
+      <div>
+        <strong>Cep:</strong>
+        <%= @address.cep %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Edit', edit_address_path(@address), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', street_addresses_path(@address.street), class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>

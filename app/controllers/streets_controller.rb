@@ -31,7 +31,7 @@ class StreetsController < ApplicationController
 
     respond_to do |format|
       if @street.save
-        format.html { redirect_to neighborhood_streets_path(@neighborhood), notice: 'Street was successfully created.' }
+        format.html { redirect_to street_path(@street), notice: 'Street was successfully created.' }
         format.json { render :show, status: :created, location: @street }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class StreetsController < ApplicationController
   def update
     respond_to do |format|
       if @street.update(street_params)
-        format.html { redirect_to neighborhood_streets_path(@street.neighborhood), notice: 'Street was successfully updated.' }
+        format.html { redirect_to street_path(@street), notice: 'Street was successfully updated.' }
         format.json { render :show, status: :ok, location: @street }
       else
         format.html { render :edit }

@@ -1,17 +1,33 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @street.name %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<p>
-  <strong>Kind:</strong>
-  <%= @street.kind %>
-</p>
+<div class="row">
 
-<div>
-  <%= link_to 'Address', street_addresses_path(@street) %>
+  <div class="col-sm-12">
+
+    <div class="well">
+
+      <div>
+        <strong>Name:</strong>
+        <%= @street.name %>
+      </div>
+
+      <div>
+        <strong>Kind:</strong>
+        <%= @street.kind %>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
-<%= link_to 'Edit', edit_street_path(@street) %> |
-<%= link_to 'Back', neighborhood_streets_path(@street.neighborhood) %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Addresses', street_addresses_path(@street), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Edit', edit_street_path(@street), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', neighborhood_streets_path(@street.neighborhood), class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>

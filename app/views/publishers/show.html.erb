@@ -1,26 +1,44 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @publisher.name %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<p>
-  <strong>Cnpj:</strong>
-  <%= @publisher.cnpj %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Endereço:</strong>
-  <% if @publisher.address_id.present? %>
-      Rua <%= @publisher.address.street.name %>,
-      <%= @publisher.address.street.neighborhood.city.name %>,
-      <%= @publisher.address.street.neighborhood.city.state.name %>,
-      <%= @publisher.address.street.neighborhood.city.state.country.name %>.
-  <% else %>
-      -
-  <% end %>
-</p>
+  <div class="col-sm-12">
 
-<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
-<%= link_to 'Back', publishers_path %>
+    <div class="well">
+
+      <div>
+        <strong>Name:</strong>
+        <%= @publisher.name %>
+      </div>
+
+      <div>
+        <strong>Cnpj:</strong>
+        <%= @publisher.cnpj %>
+      </div>
+
+      <div>
+        <strong>Endereço:</strong>
+        <% if @publisher.address_id.present? %>
+            Rua <%= @publisher.address.street.name %>,
+            <%= @publisher.address.street.neighborhood.city.name %>,
+            <%= @publisher.address.street.neighborhood.city.state.name %>,
+            <%= @publisher.address.street.neighborhood.city.state.country.name %>.
+        <% else %>
+            -
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Edit', edit_publisher_path(@publisher), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', publishers_path, class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>

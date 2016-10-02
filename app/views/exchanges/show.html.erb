@@ -1,38 +1,55 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/show_header' %>
 
-<p>
-  <strong>Date:</strong>
-  <%= l(@exchange.date, format: :long) %>
-</p>
+<%= render 'layouts/flash_success' %>
 
-<p>
-  <strong>User a:</strong>
-  <% if @exchange.user_a_username.present? %>
-      <%= @exchange.user_a.name %>
-  <% else %>
-      -
-  <% end %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Book a:</strong>
-  <%= @exchange.book_a.name %>
-</p>
+  <div class="col-sm-12">
 
-<p>
-  <strong>User b:</strong>
-  <% if @exchange.user_b_username.present? %>
-      <%= @exchange.user_b.name %>
-  <% else %>
-      -
-  <% end %>
-</p>
+    <div class="well">
 
-<p>
-  <strong>Book b:</strong>
-  <%= @exchange.book_b.name %>
-</p>
+      <div>
+        <strong>Date:</strong>
+        <%= l(@exchange.date, format: :long) %>
+      </div>
 
+      <div>
+        <strong>User a:</strong>
+        <% if @exchange.user_a_username.present? %>
+            <%= @exchange.user_a.name %>
+        <% else %>
+            -
+        <% end %>
+      </div>
 
-<%= link_to 'Edit', edit_exchange_path(@exchange) %> |
-<%= link_to 'Back', exchanges_path %>
+      <div>
+        <strong>Book a:</strong>
+        <%= @exchange.book_a.name %>
+      </div>
+
+      <div>
+        <strong>User b:</strong>
+        <% if @exchange.user_b_username.present? %>
+            <%= @exchange.user_b.name %>
+        <% else %>
+            -
+        <% end %>
+      </div>
+
+      <div>
+        <strong>Book b:</strong>
+        <%= @exchange.book_b.name %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Edit', edit_exchange_path(@exchange), class: 'btn btn-primary btn-xs' %>
+    <%= link_to 'Back', exchanges_path, class: 'btn btn-warning btn-xs' %>
+  </div>
+</div>
