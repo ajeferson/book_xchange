@@ -1,4 +1,5 @@
 class EvaluationsController < ApplicationController
+
   before_action :set_evaluation, only: [:show, :edit, :update, :destroy]
 
   # GET /evaluations
@@ -64,8 +65,7 @@ class EvaluationsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_evaluation
-    isbn, username = params[:id].split('-')
-    @evaluation = Evaluation.where('book_isbn = ? AND user_username = ?', isbn, username).first
+    @evaluation = Evaluation.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

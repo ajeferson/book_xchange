@@ -5,7 +5,7 @@ class Book < ActiveRecord::Base
   belongs_to :genre
   belongs_to :publisher, foreign_key: 'publisher_cnpj'
   belongs_to :author, foreign_key: 'author_cpf'
-  has_many :evaluations
+  has_many :evaluations, dependent: :destroy, foreign_key: 'book_isbn'
 
   self.primary_key = 'isbn'
 

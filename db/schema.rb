@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002022430) do
+ActiveRecord::Schema.define(version: 20161002025032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20161002022430) do
   create_table "countries", primary_key: "name", force: :cascade do |t|
   end
 
-  create_table "evaluations", id: false, force: :cascade do |t|
+  create_table "evaluations", force: :cascade do |t|
     t.integer "points",        null: false
     t.string  "comment"
     t.string  "user_username", null: false
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20161002022430) do
 
   create_table "exchanges", force: :cascade do |t|
     t.date   "date",            null: false
-    t.string "user_a_username", null: false
-    t.string "user_b_username", null: false
+    t.string "user_a_username"
+    t.string "user_b_username"
     t.string "book_a_isbn",     null: false
     t.string "book_b_isbn",     null: false
   end

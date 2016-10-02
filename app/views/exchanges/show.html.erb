@@ -7,7 +7,11 @@
 
 <p>
   <strong>User a:</strong>
-  <%= @exchange.user_a.name %>
+  <% if @exchange.user_a_username.present? %>
+      <%= @exchange.user_a.name %>
+  <% else %>
+      -
+  <% end %>
 </p>
 
 <p>
@@ -17,7 +21,11 @@
 
 <p>
   <strong>User b:</strong>
-  <%= @exchange.user_b.name %>
+  <% if @exchange.user_b_username.present? %>
+      <%= @exchange.user_b.name %>
+  <% else %>
+      -
+  <% end %>
 </p>
 
 <p>

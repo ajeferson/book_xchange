@@ -16,9 +16,9 @@
       <tr>
         <td><%= evaluation.points %></td>
         <td><%= evaluation.comment %></td>
-        <td><%= link_to 'Show', evaluation_path(evaluation.cool_id) %></td>
-        <td><%= link_to 'Edit', edit_evaluation_path(evaluation.cool_id) %></td>
-        <td><%= link_to 'Destroy', evaluation_path(evaluation.cool_id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', evaluation_path(evaluation) %></td>
+        <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+        <td><%= link_to 'Destroy', evaluation_path(evaluation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
