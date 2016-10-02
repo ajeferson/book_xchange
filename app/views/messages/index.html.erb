@@ -1,33 +1,43 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/list_header' %>
 
-<h1>Listing Messages</h1>
+<%= render 'layouts/flash_success' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th>Date</th>
-      <th>Sender</th>
-      <th>Addressee</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
 
-  <tbody>
-    <% @messages.each do |message| %>
-      <tr>
-        <td><%= message.body %></td>
-        <td><%= message.date %></td>
-        <td><%= message.sender.name %></td>
-        <td><%= message.addressee.name %></td>
-        <td><%= link_to 'Show', message %></td>
-        <td><%= link_to 'Edit', edit_message_path(message) %></td>
-        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="col-sm-12">
 
-<br>
+    <div class="table-responsive">
 
-<%= link_to 'New Message', new_message_path %>
+      <table class="table table-bordered table-hover">
+
+        <thead>
+        <tr>
+          <th>Body</th>
+          <th>Date</th>
+          <th>Sender</th>
+          <th>Addressee</th>
+          <th colspan="3">Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @messages.each do |message| %>
+            <tr>
+              <td><%= message.body %></td>
+              <td><%= l(message.date, format: :long) %></td>
+              <td><%= message.sender.name %></td>
+              <td><%= message.addressee.name %></td>
+              <td><%= link_to 'Show', message, class: 'btn btn-primary btn-xs' %></td>
+              <td><%= link_to 'Edit', edit_message_path(message), class: 'btn btn-primary btn-xs' %></td>
+              <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+            </tr>
+        <% end %>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
