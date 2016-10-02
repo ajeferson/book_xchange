@@ -25,13 +25,15 @@
 
 </head>
 
-<body>
+<body style="padding-top: 70px; padding-bottom: 30px">
 
-<%= yield %>
+<%= render 'layouts/navbar' %>
 
-<hr />
+<div class="container-fluid" role="main">
 
-<%= link_to 'Início', root_path %>
+  <%= yield %>
+
+</div>
 
 
 </body>
