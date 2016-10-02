@@ -25,5 +25,18 @@
   <%= @user.birth_date %>
 </p>
 
+<p>
+  <strong>Badges:</strong>
+  <% if @user.badges.any? %>
+    <ul>
+      <% @user.badges.each do |badge| %>
+          <li><%= badge.name %></li>
+      <% end %>
+    </ul>
+<% else %>
+    -
+<% end %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

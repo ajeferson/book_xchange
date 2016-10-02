@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002161429) do
+ActiveRecord::Schema.define(version: 20161002162026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "achievements", force: :cascade do |t|
+    t.integer "badge_id"
+    t.string  "user_username", null: false
+  end
+
+  add_index "achievements", ["badge_id"], name: "index_achievements_on_badge_id", using: :btree
+  add_index "achievements", ["user_username"], name: "index_achievements_on_user_username", using: :btree
 
   create_table "addresses", force: :cascade do |t|
     t.string  "number",     null: false
@@ -134,6 +142,7 @@ ActiveRecord::Schema.define(version: 20161002161429) do
     t.date   "birth_date"
   end
 
+  add_foreign_key "achievements", "badges"
   add_foreign_key "addresses", "streets"
   add_foreign_key "books", "authors", column: "author_cpf", primary_key: "cpf"
   add_foreign_key "books", "genres"

@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :exchanges_b, dependent: :nullify, foreign_key: 'user_b_username', class_name: 'Exchange'
   has_many :messages_addressee, dependent: :destroy, foreign_key: 'addressee_username', class_name: 'Message'
   has_many :messages_sender, dependent: :destroy, foreign_key: 'sender_username', class_name: 'Message'
+  has_many :achievements, foreign_key: 'user_username', dependent: :destroy
+  has_many :badges, through: :achievements
 
   validates_presence_of :name, :email, :username, :password
 
