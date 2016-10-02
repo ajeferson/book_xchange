@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002021819) do
+ActiveRecord::Schema.define(version: 20161002022430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20161002021819) do
 
   create_table "publishers", primary_key: "cnpj", force: :cascade do |t|
     t.string  "name",       null: false
-    t.integer "address_id", null: false
+    t.integer "address_id"
   end
 
   add_index "publishers", ["address_id"], name: "index_publishers_on_address_id", using: :btree

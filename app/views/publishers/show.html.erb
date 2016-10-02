@@ -10,5 +10,17 @@
   <%= @publisher.cnpj %>
 </p>
 
+<p>
+  <strong>Endereço:</strong>
+  <% if @publisher.address_id.present? %>
+      Rua <%= @publisher.address.street.name %>,
+      <%= @publisher.address.street.neighborhood.city.name %>,
+      <%= @publisher.address.street.neighborhood.city.state.name %>,
+      <%= @publisher.address.street.neighborhood.city.state.country.name %>.
+  <% else %>
+      -
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_publisher_path(@publisher) %> |
 <%= link_to 'Back', publishers_path %>
