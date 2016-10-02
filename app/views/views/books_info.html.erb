@@ -1,25 +1,39 @@
-<h1>Informações sobre livros</h1>
+<%= render 'layouts/list_header_title', title: 'Books info' %>
 
-<table>
+<%= render 'layouts/flash_success' %>
 
-  <tr>
-    <th>Nome</th>
-    <th>Páginas</th>
-    <th>ISBN</th>
-    <th>Editora</th>
-    <th>Autor</th>
-    <th>Data de publicação</th>
-  </tr>
+<div class="row">
 
-  <% @books.each do |book| %>
-      <tr>
-        <td><%= book.titulo %></td>
-        <td><%= book.pages %></td>
-        <td><%= book.isbn %></td>
-        <td><%= book.editora %></td>
-        <td><%= book.autor %></td>
-        <td><%= l(book.publicacao, format: :long) %></td>
-      </tr>
-  <% end %>
+  <div class="col-sm-12">
 
-</table>
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-hover">
+
+        <tr>
+          <th>Nome</th>
+          <th>Páginas</th>
+          <th>ISBN</th>
+          <th>Editora</th>
+          <th>Autor</th>
+          <th>Data de publicação</th>
+        </tr>
+
+        <% @books.each do |book| %>
+            <tr>
+              <td><%= book.titulo %></td>
+              <td><%= book.pages %></td>
+              <td><%= book.isbn %></td>
+              <td><%= book.editora %></td>
+              <td><%= book.autor %></td>
+              <td><%= l(book.publicacao, format: :long) %></td>
+            </tr>
+        <% end %>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

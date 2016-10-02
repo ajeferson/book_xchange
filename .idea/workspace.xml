@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb510bad-422c-4d8d-bbca-2e6ce56fe679" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/queries/pagenometer.html.erb" afterPath="$PROJECT_DIR$/app/views/queries/pagenometer.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/queries/top_authors.html.erb" afterPath="$PROJECT_DIR$/app/views/queries/top_authors.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/queries/top_contributors.html.erb" afterPath="$PROJECT_DIR$/app/views/queries/top_contributors.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/queries/top_exchanged_books.html.erb" afterPath="$PROJECT_DIR$/app/views/queries/top_exchanged_books.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/queries/top_titles.html.erb" afterPath="$PROJECT_DIR$/app/views/queries/top_titles.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/views/book_owners.html.erb" afterPath="$PROJECT_DIR$/app/views/views/book_owners.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/views/books_info.html.erb" afterPath="$PROJECT_DIR$/app/views/views/books_info.html.erb" />
     </list>
     <ignored path="book_xchange.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +42,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagenometer.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/queries/pagenometer.html.erb">
+      <file leaf-file-name="book_owners.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/views/book_owners.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
@@ -63,8 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/city.rb" />
-        <option value="$PROJECT_DIR$/app/models/neighborhood.rb" />
         <option value="$PROJECT_DIR$/app/models/street.rb" />
         <option value="$PROJECT_DIR$/app/models/address.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20161002022430_null_addresses.rb" />
@@ -114,6 +109,8 @@
         <option value="$PROJECT_DIR$/app/views/queries/top_exchanged_books.html.erb" />
         <option value="$PROJECT_DIR$/app/views/queries/top_authors.html.erb" />
         <option value="$PROJECT_DIR$/app/views/queries/pagenometer.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/views/books_info.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/views/book_owners.html.erb" />
       </list>
     </option>
   </component>
@@ -381,7 +378,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37825000" />
+    <option name="totallyTimeSpent" value="37954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -445,21 +442,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/publishers/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20161002024506_evaluations_change_pkey.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20161002023949_evaluations_add_id.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -836,6 +818,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/queries/pagenometer.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/views/books_info.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/queries/top_titles.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -844,7 +842,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/queries/pagenometer.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/views/book_owners.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
