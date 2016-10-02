@@ -1,29 +1,39 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/list_header' %>
 
-<h1>Listing Evaluations</h1>
+<%= render 'layouts/flash_success' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Points</th>
-      <th>Comment</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
 
-  <tbody>
-    <% @evaluations.each do |evaluation| %>
-      <tr>
-        <td><%= evaluation.points %></td>
-        <td><%= evaluation.comment %></td>
-        <td><%= link_to 'Show', evaluation_path(evaluation) %></td>
-        <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
-        <td><%= link_to 'Destroy', evaluation_path(evaluation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="col-sm-12">
 
-<br>
+    <div class="table-responsive">
 
-<%= link_to 'New Evaluation', new_evaluation_path %>
+      <table class="table table-bordered table-hover">
+
+        <thead>
+        <tr>
+          <th>Points</th>
+          <th>Comment</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @evaluations.each do |evaluation| %>
+            <tr>
+              <td><%= evaluation.points %></td>
+              <td><%= evaluation.comment %></td>
+              <td><%= link_to 'Show', evaluation_path(evaluation), class: 'btn btn-primary btn-xs' %></td>
+              <td><%= link_to 'Edit', edit_evaluation_path(evaluation), class: 'btn btn-primary btn-xs' %></td>
+              <td><%= link_to 'Destroy', evaluation_path(evaluation), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+            </tr>
+        <% end %>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
