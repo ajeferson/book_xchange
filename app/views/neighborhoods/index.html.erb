@@ -1,27 +1,43 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/list_header', extra_title: "for #{@city.name}" %>
 
-<h1>Listing Neighborhoods for <%= @city.name %></h1>
+<%= render 'layouts/flash_success' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
 
-  <tbody>
-    <% @neighborhoods.each do |neighborhood| %>
-      <tr>
-        <td><%= neighborhood.name %></td>
-        <td><%= link_to 'Show', neighborhood %></td>
-        <td><%= link_to 'Edit', edit_neighborhood_path(neighborhood) %></td>
-        <td><%= link_to 'Destroy', neighborhood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="col-sm-12">
 
-<br>
+    <div class="table-responsive">
 
-<%= link_to 'New Neighborhood', new_city_neighborhood_path(@city) %>
+      <table class="table table-bordered table-hover">
+
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="3">Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @neighborhoods.each do |neighborhood| %>
+            <tr>
+              <td><%= neighborhood.name %></td>
+              <td><%= link_to 'Show', neighborhood, class: 'btn btn-primary btn-xs' %></td>
+              <td><%= link_to 'Edit', edit_neighborhood_path(neighborhood), class: 'btn btn-primary btn-xs' %></td>
+              <td><%= link_to 'Destroy', neighborhood, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
+            </tr>
+        <% end %>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= link_to 'Back', city_path(@city), class: 'btn btn-primary btn-xs' %>
+  </div>
+</div>
