@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :exchanges
   resources :evaluations
   resources :messages
+  resources :badges
 
   resources :queries, only: [:index] do
     get 'top_titles', on: :collection
