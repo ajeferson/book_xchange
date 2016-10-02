@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002020644) do
+ActiveRecord::Schema.define(version: 20161002021819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20161002020644) do
     t.integer "edition",        null: false
     t.string  "publisher_cnpj"
     t.integer "genre_id"
-    t.string  "author_cpf",     null: false
+    t.string  "author_cpf"
   end
 
   add_index "books", ["author_cpf"], name: "index_books_on_author_cpf", using: :btree

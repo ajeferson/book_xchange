@@ -36,7 +36,11 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @book.author.name %>
+  <% if @book.author_cpf.present? %>
+      <%= @book.author.name %>
+  <% else %>
+      -
+  <% end %>
 </p>
 
 <p>
