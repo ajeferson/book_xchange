@@ -1,17 +1,31 @@
-<h1>Top 3 títulos com melhores avaliações</h1>
+<%= render 'layouts/list_header_title', title: 'Top titles' %>
 
-<table>
+<%= render 'layouts/flash_success' %>
 
-  <tr>
-    <th>Nome</th>
-    <th>Pontos</th>
-  </tr>
+<div class="row">
 
-  <% @books.each do |book| %>
-      <tr>
-        <td><%= book.name %></td>
-        <td><%= book.points %></td>
-      </tr>
-  <% end %>
+  <div class="col-sm-12">
 
-</table>
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-hover">
+
+        <tr>
+          <th>Nome</th>
+          <th>Pontos</th>
+        </tr>
+
+        <% @books.each do |book| %>
+            <tr>
+              <td><%= book.name %></td>
+              <td><%= book.points %></td>
+            </tr>
+        <% end %>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

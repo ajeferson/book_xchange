@@ -1,17 +1,31 @@
-<h1>Top 3 usuários que mais trocaram livros</h1>
+<%= render 'layouts/list_header_title', title: 'Top contributors' %>
 
-<table>
+<%= render 'layouts/flash_success' %>
 
-  <tr>
-    <th>Nome</th>
-    <th>Trocas</th>
-  </tr>
+<div class="row">
 
-  <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.exchanges %></td>
-      </tr>
-  <% end %>
+  <div class="col-sm-12">
 
-</table>
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-hover">
+
+        <tr>
+          <th>Nome</th>
+          <th>Trocas</th>
+        </tr>
+
+        <% @users.each do |user| %>
+            <tr>
+              <td><%= user.name %></td>
+              <td><%= user.exchanges %></td>
+            </tr>
+        <% end %>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

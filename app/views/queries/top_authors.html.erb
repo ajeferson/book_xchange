@@ -1,17 +1,31 @@
-<h1>Top 3 authores mais trocados</h1>
+<%= render 'layouts/list_header_title', title: 'Top authors' %>
 
-<table>
+<%= render 'layouts/flash_success' %>
 
-  <tr>
-    <th>Nome</th>
-    <th>Trocas</th>
-  </tr>
+<div class="row">
 
-  <% @authors.each do |author| %>
-      <tr>
-        <td><%= author.name %></td>
-        <td><%= author.ex %></td>
-      </tr>
-  <% end %>
+  <div class="col-sm-12">
 
-</table>
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-hover">
+
+        <tr>
+          <th>Nome</th>
+          <th>Trocas</th>
+        </tr>
+
+        <% @authors.each do |author| %>
+            <tr>
+              <td><%= author.name %></td>
+              <td><%= author.ex %></td>
+            </tr>
+        <% end %>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

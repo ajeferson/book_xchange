@@ -1,17 +1,31 @@
-<h1>Top 3 livros trocados</h1>
+<%= render 'layouts/list_header_title', title: 'Top exchanged titles' %>
 
-<table>
+<%= render 'layouts/flash_success' %>
 
-  <tr>
-    <th>Nome</th>
-    <th>Trocas</th>
-  </tr>
+<div class="row">
 
-  <% @books.each do |book| %>
-      <tr>
-        <td><%= book.name %></td>
-        <td><%= book.exchanges %></td>
-      </tr>
-  <% end %>
+  <div class="col-sm-12">
 
-</table>
+    <div class="table-responsive">
+
+      <table class="table table-bordered table-hover">
+
+        <tr>
+          <th>Nome</th>
+          <th>Trocas</th>
+        </tr>
+
+        <% @books.each do |book| %>
+            <tr>
+              <td><%= book.name %></td>
+              <td><%= book.exchanges %></td>
+            </tr>
+        <% end %>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
