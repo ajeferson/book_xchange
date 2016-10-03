@@ -1,31 +1,36 @@
-<%= form_for(@publisher) do |f| %>
-    <% if @publisher.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@publisher.errors.count, "error") %> prohibited this publisher from being saved:</h2>
+<%= render 'layouts/errors', resource: @publisher %>
 
-          <ul>
-            <% @publisher.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+<%= form_for(@publisher, html: {class: 'form-horizontal'}) do |f| %>
 
-    <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
+    <div class="form-group">
+      <%= f.label :name, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :cnpj %><br>
-      <%= f.text_field :cnpj %>
+
+    <div class="form-group">
+      <%= f.label :cnpj, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.text_field :cnpj, class: 'form-control', placeholder: 'CNPJ', required: true %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :address %>
-      <%= f.select :address_id,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
-          <%= options_for_select addresses_options_for_select, selected: @publisher.address_id %>
-      <% end %>
+
+
+    <div class="form-group">
+      <%= f.label :address, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.select :address_id,  nil, {include_blank: 'Selecione uma opção'}, required: true, class: 'form-control' do %>
+            <%= options_for_select addresses_options_for_select, selected: @publisher.address_id %>
+        <% end %>
+      </div>
     </div>
-    <div class="actions">
-      <%= f.submit %>
+
+    <div class="form-group">
+      <div class="col-sm-10">
+        <%= f.submit class: 'btn btn-success pull-right' %>
+        <%= link_to 'Back', publishers_path, class: 'btn btn-warning pull-right', style: 'margin-right: 10px' %>
+      </div>
     </div>
+
 <% end %>
