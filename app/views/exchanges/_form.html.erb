@@ -1,45 +1,55 @@
-<%= form_for(@exchange) do |f| %>
-    <% if @exchange.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@exchange.errors.count, "error") %> prohibited this exchange from being saved:</h2>
+<%= render 'layouts/errors', resource: @exchange %>
 
-          <ul>
-            <% @exchange.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+<%= form_for(@exchange, html: {class: 'form-horizontal'}) do |f| %>
 
-    <div class="field">
-      <%= f.label :date %><br>
-      <%= f.date_field :date %>
+    <div class="form-group">
+      <%= f.label :date, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.date_field :date, class: 'form-control', placeholder: 'Date', required: true %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :user_a %>
-      <%= f.select :user_a_username,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
-          <%= options_for_select users_options_for_select, selected: @exchange.user_a_username %>
-      <% end %>
+
+    <div class="form-group">
+      <%= f.label :user_a, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.select :user_a_username,  nil, {include_blank: 'Selecione uma opção'}, required: true, class: 'form-control' do %>
+            <%= options_for_select users_options_for_select, selected: @exchange.user_a_username %>
+        <% end %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :user_b %>
-      <%= f.select :user_b_username,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
-          <%= options_for_select users_options_for_select, selected: @exchange.user_b_username %>
-      <% end %>
+
+    <div class="form-group">
+      <%= f.label :user_b, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.select :user_b_username,  nil, {include_blank: 'Selecione uma opção'}, required: true, class: 'form-control' do %>
+            <%= options_for_select users_options_for_select, selected: @exchange.user_b_username %>
+        <% end %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :book_a %>
-      <%= f.select :book_a_isbn,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
-          <%= options_for_select books_options_for_select, selected: @exchange.book_a_isbn %>
-      <% end %>
+
+    <div class="form-group">
+      <%= f.label :book_a, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.select :book_a_isbn,  nil, {include_blank: 'Selecione uma opção'}, required: true, class: 'form-control' do %>
+            <%= options_for_select books_options_for_select, selected: @exchange.book_a_isbn %>
+        <% end %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :book_b %>
-      <%= f.select :book_b_isbn,  nil, {include_blank: 'Selecione uma opção'}, required: true do %>
-          <%= options_for_select books_options_for_select, selected: @exchange.book_b_isbn %>
-      <% end %>
+
+    <div class="form-group">
+      <%= f.label :book_b, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.select :book_b_isbn,  nil, {include_blank: 'Selecione uma opção'}, required: true, class: 'form-control' do %>
+            <%= options_for_select books_options_for_select, selected: @exchange.book_a_isbn %>
+        <% end %>
+      </div>
     </div>
-    <div class="actions">
-      <%= f.submit %>
+
+    <div class="form-group">
+      <div class="col-sm-10">
+        <%= f.submit class: 'btn btn-success pull-right' %>
+        <%= link_to 'Back', exchanges_path, class: 'btn btn-warning pull-right', style: 'margin-right: 10px' %>
+      </div>
     </div>
+
 <% end %>
