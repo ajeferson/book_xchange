@@ -5,28 +5,28 @@
     <div class="form-group">
       <%= f.label :pages, class: 'col-sm-3 control-label' %>
       <div class="col-sm-7">
-        <%= f.number_field :pages, class: 'form-control', placeholder: 'Pages' %>
+        <%= f.number_field :pages, class: 'form-control', placeholder: 'Pages', required: true %>
       </div>
     </div>
 
     <div class="form-group">
       <%= f.label :isbn, class: 'col-sm-3 control-label' %>
       <div class="col-sm-7">
-        <%= f.text_field :isbn, class: 'form-control', placeholder: 'ISBN' %>
+        <%= f.text_field :isbn, class: 'form-control', placeholder: 'ISBN', required: true %>
       </div>
     </div>
 
     <div class="form-group">
       <%= f.label :name, class: 'col-sm-3 control-label' %>
       <div class="col-sm-7">
-        <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
       </div>
     </div>
 
     <div class="form-group">
       <%= f.label :publish_date, class: 'col-sm-3 control-label' %>
       <div class="col-sm-7">
-        <%= f.date_field :publish_date, class: 'form-control', placeholder: 'Publish Date' %>
+        <%= f.date_field :publish_date, class: 'form-control', placeholder: 'Publish Date', required: true %>
       </div>
     </div>
 
@@ -34,7 +34,7 @@
     <div class="form-group">
       <%= f.label :edition, class: 'col-sm-3 control-label' %>
       <div class="col-sm-7">
-        <%= f.number_field :edition, class: 'form-control', placeholder: 'Edition' %>
+        <%= f.number_field :edition, class: 'form-control', placeholder: 'Edition', required: true %>
       </div>
     </div>
 
