@@ -6,7 +6,7 @@ class AddressesController < ApplicationController
   # GET /addresses
   # GET /addresses.json
   def index
-    @addresses = @street.addresses
+    @addresses = @street.addresses.order(number: :asc)
   end
 
   # GET /addresses/1

@@ -6,7 +6,7 @@ class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.json
   def index
-    @cities = @state.cities
+    @cities = @state.cities.order(name: :asc)
   end
 
   # GET /cities/1

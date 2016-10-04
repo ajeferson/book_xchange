@@ -6,7 +6,7 @@ class StreetsController < ApplicationController
   # GET /streets
   # GET /streets.json
   def index
-    @streets = @neighborhood.streets
+    @streets = @neighborhood.streets.order(name: :asc)
   end
 
   # GET /streets/1

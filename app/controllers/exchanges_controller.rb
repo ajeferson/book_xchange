@@ -4,7 +4,7 @@ class ExchangesController < ApplicationController
   # GET /exchanges
   # GET /exchanges.json
   def index
-    @exchanges = Exchange.all
+    @exchanges = Exchange.all.order(date: :desc)
   end
 
   # GET /exchanges/1

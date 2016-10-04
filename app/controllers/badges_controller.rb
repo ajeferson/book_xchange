@@ -4,7 +4,7 @@ class BadgesController < ApplicationController
   # GET /badges
   # GET /badges.json
   def index
-    @badges = Badge.all
+    @badges = Badge.all.order(name: :asc)
   end
 
   # GET /badges/1

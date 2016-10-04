@@ -5,7 +5,7 @@ class EvaluationsController < ApplicationController
   # GET /evaluations
   # GET /evaluations.json
   def index
-    @evaluations = Evaluation.all
+    @evaluations = Evaluation.join(:book).all.order('books.name ASC')
   end
 
   # GET /evaluations/1
