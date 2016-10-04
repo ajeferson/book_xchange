@@ -22,7 +22,7 @@
         <tbody>
         <% @exchanges.each do |exchange| %>
             <tr>
-              <td><%= exchange.date %></td>
+              <td><%= l(exchange.date, format: :long) %></td>
               <td><%= exchange.book_a.name %></td>
               <td><%= exchange.book_b.name %></td>
               <td><%= link_to 'Show', exchange, class: 'btn btn-primary btn-xs' %></td>
