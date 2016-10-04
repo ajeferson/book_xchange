@@ -6,7 +6,7 @@ class NeighborhoodsController < ApplicationController
   # GET /neighborhoods
   # GET /neighborhoods.json
   def index
-    @neighborhoods = Neighborhood.all
+    @neighborhoods = @city.all
   end
 
   # GET /neighborhoods/1
@@ -78,4 +78,5 @@ class NeighborhoodsController < ApplicationController
   def neighborhood_params
     params.require(:neighborhood).permit(:name)
   end
+
 end
