@@ -10,6 +10,8 @@ default: &default
   timeout: 5000
   encoding: unicode
   database: book_xchange
+#  adapter: mysql
+#  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
 
 development:
   <<: *default

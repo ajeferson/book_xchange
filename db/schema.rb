@@ -143,6 +143,7 @@ ActiveRecord::Schema.define(version: 20161002162026) do
   end
 
   add_foreign_key "achievements", "badges"
+  add_foreign_key "achievements", "users", column: "user_username", primary_key: "username"
   add_foreign_key "addresses", "streets"
   add_foreign_key "books", "authors", column: "author_cpf", primary_key: "cpf"
   add_foreign_key "books", "genres"
