@@ -1,21 +1,20 @@
-<%= form_for(@neighborhood, url: @neighborhood.persisted? ? neighborhood_path(@neighborhood) : city_neighborhoods_path(@city), method: @neighborhood.persisted? ? :patch : :post) do |f| %>
-  <% if @neighborhood.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@neighborhood.errors.count, "error") %> prohibited this neighborhood from being saved:</h2>
+<%= render 'layouts/errors', resource: @neighborhood %>
 
-      <ul>
-      <% @neighborhood.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for(@neighborhood, url: @neighborhood.persisted? ? neighborhood_path(@neighborhood) : city_neighborhoods_path(@city), method: @neighborhood.persisted? ? :patch : :post, html: {class: 'form-horizontal'}) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <div class="form-group">
+      <div class="col-sm-10">
+        <%= f.submit class: 'btn btn-success pull-right' %>
+        <%= link_to 'Back', city_neighborhoods_path(@neighborhood.persisted? ? @neighborhood.city : @city), class: 'btn btn-warning pull-right', style: 'margin-right: 10px' %>
+      </div>
+    </div>
+
 <% end %>

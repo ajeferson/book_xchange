@@ -1,29 +1,33 @@
-<%= form_for(@address, url: @address.persisted? ? address_path(@address) : street_addresses_path(@street), method: @address.persisted? ? :patch : :post) do |f| %>
-  <% if @address.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@address.errors.count, "error") %> prohibited this address from being saved:</h2>
+<%= render 'layouts/errors', resource: @address %>
 
-      <ul>
-      <% @address.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for(@address, url: @address.persisted? ? address_path(@address) : street_addresses_path(@street), method: @address.persisted? ? :patch : :post, html: {class: 'form-horizontal'}) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :number, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.text_field :number, class: 'form-control', placeholder: 'Number', required: true %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :number %><br>
-    <%= f.text_field :number %>
-  </div>
-  <div class="field">
-    <%= f.label :complement %><br>
-    <%= f.text_field :complement %>
-  </div>
-  <div class="field">
-    <%= f.label :cep %><br>
-    <%= f.text_field :cep %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="form-group">
+      <%= f.label :complement, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.text_field :complement, class: 'form-control', placeholder: 'Complement', required: true %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :cep, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-7">
+        <%= f.text_field :cep, class: 'form-control', placeholder: 'CEP', required: true %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-10">
+        <%= f.submit class: 'btn btn-success pull-right' %>
+        <%= link_to 'Back', street_addresses_path(@address.persisted? ? @address.street : @street), class: 'btn btn-warning pull-right', style: 'margin-right: 10px' %>
+      </div>
+    </div>
+
 <% end %>
