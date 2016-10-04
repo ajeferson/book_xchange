@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb510bad-422c-4d8d-bbca-2e6ce56fe679" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/addresses_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/addresses_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/authors_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/authors_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/badges_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/badges_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/books_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/books_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/cities_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/cities_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/countries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/countries_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/evaluations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/evaluations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/exchanges_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/exchanges_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/genres_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/genres_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/neighborhoods_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/neighborhoods_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/publishers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/publishers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/states_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/states_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/streets_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/streets_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
     </list>
     <ignored path="book_xchange.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluations_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="evaluations_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/evaluations_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -135,7 +121,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book_concern.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="book_concern.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/concerns/book_concern.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -198,12 +184,12 @@
         <option value="$PROJECT_DIR$/app/controllers/neighborhoods_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/streets_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/addresses_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/evaluations_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/exchanges_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/genres_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/publishers_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/evaluations_controller.rb" />
       </list>
     </option>
   </component>
@@ -461,12 +447,12 @@
       <workItem from="1474839361487" duration="14000" />
       <workItem from="1475346051397" duration="13166000" />
       <workItem from="1475455825813" duration="5709000" />
-      <workItem from="1475540199588" duration="5258000" />
+      <workItem from="1475540199588" duration="5455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51593000" />
+    <option name="totallyTimeSpent" value="51790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1266" height="773" extended-state="0" />
@@ -879,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/evaluations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/exchanges_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -931,6 +909,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/evaluations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding />
         </state>
       </provider>
