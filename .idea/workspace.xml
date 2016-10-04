@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb510bad-422c-4d8d-bbca-2e6ce56fe679" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/evaluations/index.html.erb" afterPath="$PROJECT_DIR$/app/views/evaluations/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/evaluations/show.html.erb" afterPath="$PROJECT_DIR$/app/views/evaluations/show.html.erb" />
     </list>
     <ignored path="book_xchange.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluation.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="evaluation.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/evaluation.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/evaluations/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -59,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/badges/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/badges/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/evaluations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/evaluations/edit.html.erb" />
@@ -110,6 +119,7 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/controllers/neighborhoods_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/evaluations/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/evaluations/show.html.erb" />
       </list>
     </option>
   </component>
@@ -367,12 +377,12 @@
       <workItem from="1474839361487" duration="14000" />
       <workItem from="1475346051397" duration="13166000" />
       <workItem from="1475455825813" duration="5709000" />
-      <workItem from="1475540199588" duration="4428000" />
+      <workItem from="1475540199588" duration="4477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50763000" />
+    <option name="totallyTimeSpent" value="50812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1266" height="773" extended-state="0" />
@@ -436,13 +446,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/evaluations/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -821,6 +824,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/evaluations/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
       </provider>
