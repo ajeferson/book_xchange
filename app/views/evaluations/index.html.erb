@@ -12,6 +12,7 @@
 
         <thead>
         <tr>
+          <th>Book</th>
           <th>Points</th>
           <th>Comment</th>
           <th colspan="3"></th>
@@ -21,6 +22,7 @@
         <tbody>
         <% @evaluations.each do |evaluation| %>
             <tr>
+              <td><%= evaluation.book.name %></td>
               <td><%= evaluation.points %></td>
               <td><%= evaluation.comment %></td>
               <td><%= link_to 'Show', evaluation_path(evaluation), class: 'btn btn-primary btn-xs' %></td>
