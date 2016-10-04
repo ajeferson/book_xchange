@@ -35,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/neighborhoods_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -357,12 +357,12 @@
       <workItem from="1474839361487" duration="14000" />
       <workItem from="1475346051397" duration="13166000" />
       <workItem from="1475455825813" duration="5709000" />
-      <workItem from="1475540199588" duration="4221000" />
+      <workItem from="1475540199588" duration="4254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50556000" />
+    <option name="totallyTimeSpent" value="50589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1266" height="773" extended-state="0" />
@@ -808,7 +808,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/neighborhoods_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding />
         </state>
       </provider>
