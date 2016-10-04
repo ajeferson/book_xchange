@@ -23,15 +23,13 @@ class_methods do
 
   def top_exchanged_books
     Book.find_by_sql(
-        "SELECT
+        'SELECT
           COUNT(isbn) AS exchanges, name
         FROM (
           SELECT
             *
           FROM
             exchanges
-          WHERE
-            date BETWEEN '2016-09-01' and '2016-09-25'
         ) AS t1
         JOIN
           books
@@ -42,7 +40,7 @@ class_methods do
         ORDER BY
           exchanges DESC, name ASC
         LIMIT
-          3"
+          3'
     )
   end
 
